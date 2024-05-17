@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import { IoIosCheckmarkCircleOutline} from "react-icons/io";
 
 const Feature = ({feature}) => {
     return (
         <div>
-            <p>{feature}</p>
+            <p className='flex items-center gap-2'><IoIosCheckmarkCircleOutline className='bg-green-600 rounded-full'></IoIosCheckmarkCircleOutline>{feature}</p>
         </div>
     );
 };
