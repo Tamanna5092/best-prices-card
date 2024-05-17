@@ -27,13 +27,14 @@ const LineChart = () => {
             </LCchart>
            </div>
            <div>
-            <BarChart width={800} height={400} data={subjectMarksData}>
+            <BarChart width={1200} height={500} data={subjectMarksData}>
                 <XAxis></XAxis>
                 <YAxis></YAxis>
                 <Tooltip></Tooltip>
                 <Legend></Legend>
                 <Bar dataKey={"math_score"}  fill={"#8884d8"}></Bar>
                 <Bar dataKey={"physics_score"}  fill={"#82ca9d"}></Bar>
+                <Bar dataKey={"chemistry_score"}  fill={"orange"}></Bar>
             </BarChart>
            </div>
         </div>
