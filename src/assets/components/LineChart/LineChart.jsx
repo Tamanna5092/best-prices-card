@@ -1,4 +1,4 @@
-import { LineChart as LCchart, Line } from 'recharts';
+import { LineChart as LCchart, Line, XAxis, YAxis, BarChart, Bar, Tooltip, Legend, } from 'recharts';
 
 const LineChart = () => {
     const subjectMarksData =  [
@@ -16,12 +16,26 @@ const LineChart = () => {
       
 
     return (
-        <div>
-            <LCchart width={500} height={400} data={subjectMarksData}>
-                <Line dataKey="math_score"></Line>
-                <Line dataKey="physics_score"></Line>
-                <Line dataKey="chemistry_score"></Line>
+        <div className='mt-10'>
+           <div>
+           <LCchart width={800} height={400} data={subjectMarksData}>
+                <XAxis></XAxis>
+                <YAxis></YAxis>
+                <Line dataKey="math_score" stroke="red"></Line>
+                <Line dataKey="physics_score" stroke="chocolate"></Line>
+                <Line dataKey="chemistry_score" stroke="green"></Line>
             </LCchart>
+           </div>
+           <div>
+            <BarChart width={800} height={400} data={subjectMarksData}>
+                <XAxis></XAxis>
+                <YAxis></YAxis>
+                <Tooltip></Tooltip>
+                <Legend></Legend>
+                <Bar dataKey={"math_score"}  fill={"#8884d8"}></Bar>
+                <Bar dataKey={"physics_score"}  fill={"#82ca9d"}></Bar>
+            </BarChart>
+           </div>
         </div>
     );
 };
